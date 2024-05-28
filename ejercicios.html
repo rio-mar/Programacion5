@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sumativa 1</title>
+    <link rel="stylesheet" href="style.css">
+    
+</head>
+<body onload="mostrar()">
+
+    <div id="watch"></div>
+
+    <script type="text/javascript">
+        //ejercicio 1
+
+        //mensaje de bienvenida, Fecha y hora.
+        function mostrar(){
+            let mensaje = "Bienvenido."
+            // se obtiene la fecha y hora actual
+            let fecha = new Date();
+            // se extrae las horas, minutos y segundos de la fecha
+            let hora = fecha.getHours();
+            let minutos = fecha.getMinutes();
+            let segundos = fecha.getSeconds();
+            
+            let bienvenida = mensaje + " Hoy es " +fecha.toLocaleDateString() +" y son las "+ hora + " : "+ minutos +" : "+segundos;
+        
+            alert(bienvenida);
+        }
+       
+        console. log("ejercicio 3");
+        //Escribir una expresión que compare dos strings y produzca un valor TRUE.
+        let a = "hola";
+        let b = "hola";
+
+        let resultado = a == b;
+
+        console.log(resultado); // true
+
+        console.log("ejercicio 4")
+        //Escribir una expresión comparando dos strings que devuelva FALSE.
+        let c = "hello";
+        let d = "hola";
+
+        let comparacion = c == d;
+
+        console.log(comparacion); // false
+
+        console.log("ejercicio 5");
+        //Escribir una expresión que involucre un string y un número y devuelva FALSE.
+        
+        let string = "Hola";
+        let numero = 5;
+
+        let falso = string == numero;
+
+        console.log(falso); // false
+
+        console.log("ejercicio 6");
+        //Escribir una expresión que involucre un string y un número y devuelva TRUE.
+        
+        let verdadero = string != numero;
+
+        console.log(verdadero); // true
+
+        console.log("ejercicio 7");
+
+        // Comprobar la siguiente expresión es verdadera o falsa, documentar su respuesta
+        let x = 25
+        let y = "a"
+        let res = y === "b" || x >= 25
+        console.log(res); //false
+
+        //Para que la expresión completa sea verdadera al menos una de las partes debe ser verdadera. Como la segunda parte (x >= 25) es verdadera, la expresión completa es verdadera.
+
+        console.log("ejercicio 8");
+        //Comprobar la siguiente expresión es verdadera o falsa, documentar su respuesta.
+        
+        let n = 15
+        let nn = 2
+        
+        console.log(!( n == "15" || n === nn ) && !(nn !== 2 && n <= nn)); //false
+        
+        /* 
+        n == "15" es verdadero
+        n === nn es falso, 
+        entonces ( n == "15" || n === nn ) es verdadero (verdadero || falso = verdadero) y !( n == "15" || n === nn ) falso
+
+        nn !== 2 es falso, n sí es dos.
+        n <= nn es falso, 15 no es menor igual a 2.
+        nn !== 2 && n <= nn es falso (falso && falso = falso) y !(nn !== 2 && n <= nn) es verdadero
+
+        la combinación de esas expresiones (false && true) da como resultado false.
+        
+        Esto confirma que la expresión completa es false.
+    
+        */
+
+        
+    </script>
+    <script src="bienvenida.js"></script>
+</body>
+</html>
